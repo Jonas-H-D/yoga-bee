@@ -1,0 +1,13 @@
+<div class="container">
+<h2>New Yoga Location Registration</h2>
+<%= simple_form_for(@location) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :number_of_rooms %>
+  <%= f.input :capacity %>
+  <%= f.input :price_per_night %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
+</div>
