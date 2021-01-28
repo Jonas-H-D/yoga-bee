@@ -1,0 +1,12 @@
+<div class="container">
+<h2> <%= @location.name %></h2>
+<p> <%= @location.address %></p>
+<p><%= @location.city %></p>
+<p>Price/ Night: <%= @location.price_per_night %> Euros</p>
+<p>Rooms: <%= @location.number_of_rooms %></p>
+<p>Capacity: <%= @location.capacity %> Pax</p>
+<p><%= @location.description %></p>
+
+<%= link_to "index", locations_path %>
+
+</div>

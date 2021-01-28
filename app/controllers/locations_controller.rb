@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
     @location = Location.new(location_params)
     @location.save
 
-    redirect_to location
+    redirect_to location_path(@location)
   end
 
   def index
