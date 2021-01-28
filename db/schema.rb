@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_28_100127) do
+ActiveRecord::Schema.define(version: 2021_01_28_101029) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_100127) do
     t.integer "zip_code"
     t.integer "capacity_activity_room"
     t.string "currency"
+    t.string "country"
   end
 
 end

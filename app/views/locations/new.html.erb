@@ -1,5 +1,6 @@
 <div class="container">
 <h2>New Yoga Location Registration</h2>
+<%= link_to "index", locations_path  %>
 <%= simple_form_for(@location) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
@@ -11,6 +12,8 @@
   <%= f.input :currency %>
   <%= f.input :capacity_activity_room %>
   <%= f.input :description %>
+
   <%= f.submit %>
 <% end %>
+
 </div>
