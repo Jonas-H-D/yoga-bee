@@ -1,0 +1,19 @@
+<div class="container">
+<h2>Update Yoga Location</h2>
+<%= link_to "index", locations_path  %>
+<%= simple_form_for(@location) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :zip_code %>
+  <%= f.input :city %>
+  <%= f.input :number_of_rooms %>
+  <%= f.input :capacity %>
+  <%= f.input :price_per_night %>
+  <%= f.input :currency %>
+  <%= f.input :capacity_activity_room %>
+  <%= f.input :description %>
+
+  <%= f.submit %>
+<% end %>
+
+</div>
