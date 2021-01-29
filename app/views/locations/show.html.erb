@@ -7,7 +7,11 @@
 <p>Capacity: <%= @location.capacity %> Pax</p>
 <p><%= @location.description %></p>
 
-<%= link_to "index", locations_path %>
-<%= link_to "edit", edit_location_path %>
+<%= link_to "index /", locations_path %>
+<%= link_to " edit /", edit_location_path %>
+<%= link_to " delete",
+  location_path(@location),
+            method: :delete,
+            data: { confirm: "Are you sure?"} %>
 
 </div>

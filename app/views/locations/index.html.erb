@@ -1,6 +1,7 @@
 <div class="container">
 <h2>All Our Available destinations</h2>
-<%= link_to "Create New Location", new_location_path  %>
+<%= link_to "Create New Location / ", new_location_path  %>
+<%= link_to "Home Page", root_path  %>
 <ul>
   <% @locations.each do |location| %>
     <li><%= link_to location.name, location_path(location) %> </li>

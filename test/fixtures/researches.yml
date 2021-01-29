@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  arrival: 2021-01-28 17:05:53
+  departure: 2021-01-28 17:05:53
+  city: MyString
+
+two:
+  arrival: 2021-01-28 17:05:53
+  departure: 2021-01-28 17:05:53
+  city: MyString
