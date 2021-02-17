@@ -2,28 +2,7 @@
   <div class="container">
     <h1>Yoga Bee is your first choice when it comes to picking your yoga retreat location </h1>
     <div class="container">
-    <p>Pick your dates</p>
-    <%= form_with(url: "/process_dates" ) do %>
-        <div class="row">
-            <div class="border">
-                <%= text_field_tag 'first_date', "Arrival", class: 'flatpickr' %>
-            </div>
-
-            <div class="col-md-auto">   </div>
-            <div class="border">
-                <%= text_field_tag 'second_date', "Departure", class: 'flatpickr' %>
-            </div>
-        </div>
-        <div class="row"><div> </div></div>
-      <div class="row">
-            <div>
-                <%= submit_tag("submit", class: "btn btn-flat", data: {tooltip_display: :true, placement: :bottom})  %>
-
-            </div>
-            <div class="col-md-auto"> </div>
-        </div>
-        <div class="col-md-auto">   </div>
-    <% end %>
+      <%= render 'shared/form' %>
 </div>
   </div>
 </div>
