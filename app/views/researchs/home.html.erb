@@ -1,56 +1,31 @@
-<div class="container">
-  <h2>This is the Home Page</h2>
-
-  <%= link_to "All properties", locations_path  %>
-
-<div class="container bg-primary">
-
-    <h1>Give Your Dates</h1>
-
-
-    <%= form_with(url: "/process_dates") do %>
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/assets/fontaine.jpg);">
+  <div class="container">
+    <h1>Yoga Bee is your first choice when it comes to picking your yoga retreat location </h1>
+    <div class="container">
+    <p>Pick your dates</p>
+    <%= form_with(url: "/process_dates" ) do %>
         <div class="row">
-
             <div class="border">
-
-                <%= text_field_tag 'first_date', "Select Date One", class: 'flatpickr' %>
-
+                <%= text_field_tag 'first_date', "Arrival", class: 'flatpickr' %>
             </div>
 
             <div class="col-md-auto">   </div>
-
             <div class="border">
-
-                <%= text_field_tag 'second_date', "Select Date Two", class: 'flatpickr' %>
-
+                <%= text_field_tag 'second_date', "Departure", class: 'flatpickr' %>
             </div>
-
         </div>
-
         <div class="row"><div> </div></div>
-
-
       <div class="row">
-
             <div>
-
-                <%= submit_tag("Hist", class: "btn btn-secondary", data: {tooltip_display: :true, placement: :bottom}, title: "Historical Events")  %>
+                <%= submit_tag("submit", class: "btn btn-flat", data: {tooltip_display: :true, placement: :bottom})  %>
 
             </div>
-
             <div class="col-md-auto"> </div>
-
-            <div>
-
-                <%= submit_tag("Diff", class: "btn btn-secondary", data: {tooltip_display: :true, placement: :bottom}, title: "Difference in days")  %>
-
-            </div>
-
         </div>
-
         <div class="col-md-auto">   </div>
-
     <% end %>
-
 </div>
+  </div>
+</div>
+
+
