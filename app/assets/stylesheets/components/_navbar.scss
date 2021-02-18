@@ -1,6 +1,17 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: white;
+  transition: 0.5s background ease;
+  height: 55px;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
+}
+
+#logo {
+  height: 60px;
+  width: 125px;
 }
 
 .navbar-lewagon .navbar-collapse {

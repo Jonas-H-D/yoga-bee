@@ -1,24 +1,25 @@
 
-<div class="container bg-primary">
-    <h1>Give Your Dates</h1>
+<div class="container">
+    <p>Choose your dates</p>
     <%= form_with(url: "/process_dates") do %>
         <div class="row">
             <div class="border">
-                <%= text_field_tag 'first_date', "Select Date One", class: 'flatpickr' %>
+                <%= text_field_tag 'first_date', "Arrival date", class: 'flatpickr' %>
             </div>
             <div class="col-md-auto">   </div>
             <div class="border">
-                <%= text_field_tag 'second_date', "Select Date Two", class: 'flatpickr' %>
+                <%= text_field_tag 'second_date', "Departure date", class: 'flatpickr' %>
             </div>
         </div>
         <div class="row"><div> </div></div>
         <div class="row">
+          <br>
             <div>
-                <%= submit_tag("Hist", class: "btn btn-secondary", data: {tooltip_display: :true, placement: :bottom}, title: "Historical Events")  %>
+                <%= submit_tag("Submit dates", class: "btn btn-primary btn-dates", data: {tooltip_display: :true, placement: :bottom})  %>
             </div>
             <div class="col-md-auto"> </div>
             <div>
-                <%= submit_tag("Diff", class: "btn btn-secondary", data: {tooltip_display: :true, placement: :bottom}, title: "Difference in days")  %>
+                <%= submit_tag("See all properties", class: "btn btn-primary", data: {tooltip_display: :true, placement: :bottom})  %>
             </div>
         </div>
         <div class="col-md-auto">   </div>
