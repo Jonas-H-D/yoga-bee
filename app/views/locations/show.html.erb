@@ -1,17 +1,21 @@
-<div class="container">
+<div class="container mt-5">
 <h2> <%= @location.name %></h2>
 <p> <%= @location.address %></p>
 <p><%= @location.city %></p>
 <p>Price/ Night: <%= @location.price_per_night %> Euros</p>
 <p>Rooms: <%= @location.number_of_rooms %></p>
 <p>Capacity: <%= @location.capacity %> Pax</p>
+<p>User: <%= @location.user %></p>
 <p><%= @location.description %></p>
 
-<%= link_to "index /", locations_path %>
-<%= link_to " edit /", edit_location_path %>
-<%= link_to " delete",
-  location_path(@location),
-            method: :delete,
-            data: { confirm: "Are you sure?"} %>
-
+<%= link_to "index", locations_path %>
+  <% if policy(Location).edit? %>
+    <%= link_to " edit", edit_location_path %>
+  <% end %>
+  <% if policy(Location).destroy? %>
+  <%= link_to " delete",
+    location_path(@location),
+              method: :delete,
+              data: { confirm: "Are you sure?"} %>
+  <% end %>
 </div>
