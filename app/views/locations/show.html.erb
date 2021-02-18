@@ -9,10 +9,10 @@
 <p><%= @location.description %></p>
 
 <%= link_to "index", locations_path %>
-  <% if policy(Location).edit? %>
+  <% if policy(@location).edit? %>
     <%= link_to " edit", edit_location_path %>
   <% end %>
-  <% if policy(Location).destroy? %>
+  <% if policy(@location).destroy? %>
   <%= link_to " delete",
     location_path(@location),
               method: :delete,

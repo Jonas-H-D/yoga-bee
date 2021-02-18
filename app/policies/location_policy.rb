@@ -14,10 +14,10 @@ class LocationPolicy < ApplicationPolicy
   end
 
   def update?
-    record.user_id == user(id)
+    @record.user == user
   end
 
   def destroy?
-    record.user_id == user(id)
+    @record.user == user
   end
 end
