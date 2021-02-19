@@ -2,14 +2,15 @@
 <h2>New Yoga Location Registration</h2>
 <%= link_to "index", locations_path  %>
 <%= simple_form_for(@location) do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, hint: "Enter something catchy" %>
   <%= f.input :address %>
   <%= f.input :zip_code %>
   <%= f.input :city %>
+  <%= f.input :country, as: :country %>
   <%= f.input :number_of_rooms %>
   <%= f.input :capacity %>
   <%= f.input :price_per_night %>
-  <%= f.input :currency %>
+  <%= f.input :currency, collection: ['Euro', 'Chf', 'Dollars'] %>
   <%= f.input :capacity_activity_room %>
   <%= f.input :description %>
 
