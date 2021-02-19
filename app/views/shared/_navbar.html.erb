@@ -12,6 +12,12 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
       <li class="nav-item active">
+        <%= link_to "New booking", new_booking_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Bookings", bookings_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
         <%= link_to "index", locations_path, class: "nav-link" %>
       </li>
       <li class="nav-item">

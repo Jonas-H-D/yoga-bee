@@ -1,0 +1,14 @@
+<div class="container mt-5">
+<h2>New Booking</h2>
+<%= link_to "index", locations_path  %>
+<%= simple_form_for(@booking) do |f| %>
+  <%= f.input :arrival %>
+  <%= f.input :departure %>
+  <%= f.input :number_of_people %>
+  <%= f.input :number_of_rooms %>
+  <%= f.input :location_id %>
+
+  <%= f.submit %>
+<% end %>
+
+</div>
