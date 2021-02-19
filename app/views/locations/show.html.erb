@@ -1,22 +1,30 @@
 <div class="container mt-5">
-<h2> <%= @location.name %></h2>
-<p> <%= @location.address %></p>
-<p><%= @location.city %></p>
-<p><%= @location.country %></p>
-<p>Price/ Night: <%= @location.price_per_night %> Euros</p>
-<p>Rooms: <%= @location.number_of_rooms %></p>
-<p>Capacity: <%= @location.capacity %> Pax</p>
-<p>User: <%= @location.user %></p>
-<p><%= @location.description %></p>
+  <div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2> <%= @location.name %></h2>
+      <p> <%= @location.address %></p>
+      <p><%= @location.city %></p>
+      <p><%= @location.country %></p>
+      <p>Rooms: <%= @location.number_of_rooms %></p>
+      <p>Capacity: <%= @location.capacity %> Pax</p>
+      <p>User: <%= @location.user %></p>
+      <p><%= @location.description %></p>
 
-<%= link_to "index", locations_path %>
-  <% if policy(@location).edit? %>
-    <%= link_to " edit", edit_location_path %>
-  <% end %>
-  <% if policy(@location).destroy? %>
-  <%= link_to " delete",
-    location_path(@location),
-              method: :delete,
-              data: { confirm: "Are you sure?"} %>
-  <% end %>
+      <%= link_to "index", locations_path %>
+        <% if policy(@location).edit? %>
+          <%= link_to " edit", edit_location_path %>
+        <% end %>
+        <% if policy(@location).destroy? %>
+        <%= link_to " delete",
+          location_path(@location),
+                    method: :delete,
+                    data: { confirm: "Are you sure?"} %>
+        <% end %>
+    </div>
+    <h2 class="card-trip-pricing">Price/ Night: <%= @location.price_per_night %></h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
 </div>

@@ -10,6 +10,10 @@ class ApplicationPolicy
     false
   end
 
+  def home?
+    false
+  end
+
   def show?
     false
   end
