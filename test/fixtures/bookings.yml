@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  arrival: 2021-02-19
+  departure: 2021-02-19
+  numberOfPeople: 1
+  numberOfRooms: 1
+  location: one
+  user: one
+
+two:
+  arrival: 2021-02-19
+  departure: 2021-02-19
+  numberOfPeople: 1
+  numberOfRooms: 1
+  location: two
+  user: two
